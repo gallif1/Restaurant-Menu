@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- תמונת המוצר -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"/>
+
+    <!-- שם המוצר -->
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"/>
+
+    <!-- מחיר המוצר -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"/>
+
+    <!-- בורר כמות עם כפתורי + ו- -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/decreaseQuantity"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:textSize="24sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="1"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/increaseQuantity"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:textSize="24sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- הערות להזמנה -->
+    <EditText
+        android:id="@+id/notesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notes (Optional)"
+        android:layout_marginTop="10dp"/>
+
+    <!-- כפתור הוספה להזמנה -->
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Order"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+
+    <!-- כפתור חזרה -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
